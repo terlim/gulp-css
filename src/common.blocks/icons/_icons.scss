@@ -7,13 +7,13 @@ $icon_font_name:"myiconfont";
 	url('../fonts/icons/myiconfont.ttf') format('truetype'),
 	url('../fonts/icons/myiconfont.svg#myiconfont') format('svg');
 }
-%icon-glyphicons-115-list,
 %icon-glyphicons-243-map-marker,
 %icon-glyphicons-28-search,
 %icon-glyphicons-443-earphone,
 %icon-glyphicons-550-ruble,
 %icon-glyphicons-commerce,
 %icon-glyphicons-eye-open,
+%icon-glyphicons-list,
 %icon-if_ic_arrow_drop_down_48px_352021,
 %icon-trash-can,
 %last_selector {
@@ -57,25 +57,25 @@ $icon_font_name:"myiconfont";
 	}
 }
 
-%icon-glyphicons-115-list:before {
+%icon-glyphicons-243-map-marker:before {
 	content:'\E001';
 }
-%icon-glyphicons-243-map-marker:before {
+%icon-glyphicons-28-search:before {
 	content:'\E002';
 }
-%icon-glyphicons-28-search:before {
+%icon-glyphicons-443-earphone:before {
 	content:'\E003';
 }
-%icon-glyphicons-443-earphone:before {
+%icon-glyphicons-550-ruble:before {
 	content:'\E004';
 }
-%icon-glyphicons-550-ruble:before {
+%icon-glyphicons-commerce:before {
 	content:'\E005';
 }
-%icon-glyphicons-commerce:before {
+%icon-glyphicons-eye-open:before {
 	content:'\E006';
 }
-%icon-glyphicons-eye-open:before {
+%icon-glyphicons-list:before {
 	content:'\E007';
 }
 %icon-if_ic_arrow_drop_down_48px_352021:before {

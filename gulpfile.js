@@ -202,6 +202,7 @@ gulp.task('iconfont', function(){
 
 // Watch
 gulp.task('watch', function(){
+    gulp.watch(path.src.icon, gulp.series('iconfont'))
     gulp.watch(path.watch.css, gulp.series('css:build'));
     gulp.watch(path.watch.scss, gulp.series('scss:build'));
     gulp.watch(path.watch.html, gulp.series('html:build'));
