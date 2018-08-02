@@ -19,6 +19,7 @@
   "homepage": "https://github.com/terlim/gulp-css#readme",
   "devDependencies": {
     "browser-sync": "^2.24.6",
+    "css-mqpacker": "^7.0.0",
     "del": "^3.0.0",
     "gulp": "^4.0.0",
     "gulp-autoprefixer": "^5.0.0",
@@ -31,9 +32,12 @@
     "gulp-newer": "^1.4.0",
     "gulp-notify": "^3.2.0",
     "gulp-plumber": "^1.2.0",
+    "gulp-postcss": "^7.0.1",
     "gulp-rename": "^1.4.0",
     "gulp-rigger": "^0.5.8",
     "gulp-sass": "^4.0.1",
-    "gulp-uglify": "^3.0.1"
+    "gulp-uglify": "^3.0.1",
+    "postcss-combine-duplicated-selectors": "^6.0.1",
+    "postcss-focus": "^3.0.0"
   }
 }

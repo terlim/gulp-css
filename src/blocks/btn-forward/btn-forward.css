@@ -1,0 +1,11 @@
+.btn-forward{
+    color: #111;
+    background-color: #f8f9fa;
+    border-color: #f8f9fa;
+    align-self: center;
+}
+.btn-forward:hover{
+    color: #111;
+    background-color: #e2e6ea;
+    border-color: #dae0e5;
+}

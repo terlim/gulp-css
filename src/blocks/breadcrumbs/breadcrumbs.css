@@ -1,0 +1,27 @@
+.breadcrumb {
+    margin-top: 0;
+    font-size: .9rem;
+    display: flex;
+    flex-wrap: wrap;
+    padding: .75rem 1rem;
+    margin-bottom: 1rem;
+    list-style: none;
+    background-color: #e9ecef;
+    border-radius: 0;
+}
+.breadcrumb-item+.breadcrumb-item {
+    padding-left: .5rem;
+}
+
+.breadcrumb-item+.breadcrumb-item:before {
+    display: inline-block;
+    padding-right: .5rem;
+    color: #6c757d;
+    content: "/";
+}
+.breadcrumb-item.active {
+    color: #6c757d;
+}
+.breadcrumb-item:hover{
+    color: rgba(0,0,0,.3);
+}

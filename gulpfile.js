@@ -16,6 +16,8 @@ const scss              = require('gulp-sass'); // модуль для комп�
 const cached            = require('gulp-cached');
 const dependents        = require('gulp-dependents');
 const cssbeautify       = require('gulp-cssbeautify');
+const postcss           = require('gulp-postcss');
+
 
 // Vars
 var path = {
@@ -40,10 +42,21 @@ var path = {
     watch: {
         html:  'src/**/*.html',
         scss:  'src/**/*.scss',
+        css:  'src/**/*.css',
         img:   'src/img/**/*.*',
         fonts: 'srs/fonts/**/*.*'
     }
 };
+
+
+var processorArray = [
+
+    require('postcss-focus')(),
+    require('css-mqpacker')(),
+    require('postcss-combine-duplicated-selectors')()
+
+];
+
 
 /*Задачи*/
 // Clean
@@ -87,8 +100,6 @@ gulp.task('html:build', function () {
             })
         })) // отслеживание ошибок
         .pipe(rigger()) //Прогоним через rigger
-        .pipe(newer(path.build.html))
-
         .pipe(debug({title:'html'}))
         .pipe(gulp.dest(path.build.html));// выкладывание готовых файлов
 
@@ -116,7 +127,7 @@ gulp.task('js:build', function () {
 
 // SCSS-> CSS
 
-gulp.task('css:build', function() {
+gulp.task('scss:build', function() {
     return gulp
         .src(path.watch.scss)
         .pipe(plumber({
@@ -139,24 +150,47 @@ gulp.task('css:build', function() {
         }))
 });
 
+// сборка CSS
+gulp.task('css:build', function () {
+    return gulp.src(path.src.css)
+        .pipe(plumber({
+            errorHandler: notify.onError(function (err) {
+                return{
+                    title: 'CSS',
+                    message: err.message
+                }
+            })
+        })) // отслеживание ошибок
+        .pipe(postcss(processorArray))
+        .pipe(gulp.dest(path.build.css)) // выгружаем в build
+        .pipe(cssnano({
+            zindex: false,
+            discardComments: {
+                removeAll: true
+            }
+        }))
+        .pipe(rename({ suffix: '.min', prefix : '' }))
+        .pipe(gulp.dest(path.build.css));
 
+});
 
 
 
 
 // Watch
 gulp.task('watch', function(){
-    gulp.watch(path.src.style, gulp.series('css:build'));
-    gulp.watch(path.src.css, gulp.series('css:build'));
-    gulp.watch('src/**/*.html', gulp.series('html:build'));
-    gulp.watch(path.src.fonts, gulp.series('fonts:build'));
-    gulp.watch(path.src.img, gulp.series('img:build'));
-    gulp.watch(path.src.js, gulp.series('js:build'));
+    gulp.watch(path.watch.css, gulp.series('css:build'));
+    gulp.watch(path.watch.scss, gulp.series('scss:build'));
+    gulp.watch(path.watch.html, gulp.series('html:build'));
+    gulp.watch(path.watch.fonts, gulp.series('fonts:build'));
+    gulp.watch(path.watch.img, gulp.series('img:build'));
+   // gulp.watch(path.src.js, gulp.series('js:build'));
 
 });
 
 // Сброка полная
-gulp.task('build:all', gulp.parallel('html:build','css:build','js:build','fonts:build','img:build'));
+gulp.task('build:all', gulp.parallel('html:build','css:build','fonts:build','img:build'));
+//gulp.task('build:all', gulp.parallel('html:build','css:build','js:build','fonts:build','img:build'));
 
 
 //  default

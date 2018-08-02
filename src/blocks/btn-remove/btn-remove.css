@@ -1,0 +1,14 @@
+.btn-remove {
+    background-color: transparent;
+    display: inline-block;
+    cursor: pointer;
+    color: #212529;
+
+    user-select: none;
+    border: 0 solid transparent;
+    align-self: center;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.btn-remove:hover {
+    color: #d63124;
+}

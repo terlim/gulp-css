@@ -1,0 +1,89 @@
+.card-tovar:hover {
+    box-shadow: 0 0 0 1px rgba(0,0,0,.1), 0 10px 20px -5px rgba(0,0,0,.4);
+    border-bottom: 1px solid transparent;
+    transition: all .5s ease;
+}
+.card-tovar {
+    color: #383838;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    transition: all .5s ease;
+    border-bottom: 1px solid #979eab;
+    height: 100%;
+}
+.card-tovar__title {
+    background-color: #ecedef;
+    text-transform: uppercase;
+    font-weight: 300;
+    padding: 0 1rem;
+    min-height: 1.5rem;
+}
+.card-tovar__subtitle {
+    padding: 0 1rem;
+    margin-bottom: .3rem;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+}
+.card-tovar__border-left {
+    border-left: 1px solid rgba(0,0,0,.1);
+}
+
+@media (--viewport-xlarge) {
+    .card-tovar__options {
+        font-size: 1rem;
+    }
+}
+.card-tovar__options {
+    text-align: right;
+    margin-right: .5rem;
+    font-size: .8rem;
+}
+
+.card-tovar__price span {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.card-tovar .badge {
+    padding-top: .2em;
+    background-color: #43db1a;
+}
+.badge-success {
+    color: #fff;
+    background-color: #28a745;
+}
+.badge-pill {
+    padding-right: .6em;
+    padding-left: .6em;
+    border-radius: 10rem;
+}
+.badge {
+    display: inline-block;
+    padding: .25em .4em;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25rem;
+}
+.card-tovar__footer {
+    margin-top: 1rem;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: .5rem;
+}
+.card-tovar__discount {
+
+    flex: 3;
+}
+.card-tovar__form {
+    flex: 6;
+}
+.card-tovar__form {
+    justify-content: flex-end;
+    margin-bottom: 0;
+}

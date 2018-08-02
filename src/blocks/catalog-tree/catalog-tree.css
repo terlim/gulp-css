@@ -1,0 +1,95 @@
+.catalog-tree-wrapper{
+
+    display: block;
+    box-shadow: 0 0 0 1px rgba(0,0,0,.1), 0 10px 20px -5px rgba(0,0,0,.4);
+
+}
+.catalog-tree__title{
+    text-transform: uppercase;
+    background-color: #414d64;
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 1rem;
+    font-weight:400;
+}
+.catalog-tree__accordion{
+    padding: 0;
+    overflow: hidden;
+}
+
+.catalog-tree__dropdown{
+    display: block;
+    position: relative;
+
+    &:after {
+
+         position: absolute;
+         top: 50%;
+         right: -1rem;
+         width: 12px;
+         height: 6px;
+         margin-top: -3px;
+         content: "";
+         cursor: pointer;
+         text-align: center;
+         opacity: .9;
+
+         background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iNiIgdmlld0JveD0iMCAwIDEyIDYiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHRpdGxlPlNoYXBlIDI8L3RpdGxlPjxwYXRoIGQ9Ik0uOCAwTDYgNC42IDExLjIgMGwuOC43TDYgNiAwIC43LjggMHoiIGZpbGw9IiMwMDAiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg==");
+
+         transform: rotate(180deg);
+         transition-property: transform;
+         transition-duration: .5s;
+    }
+
+}
+.catalog-tree__item{
+    padding: 0rem 1.5rem 0rem .5rem;
+    list-style-type: none;
+    border-bottom: 1px solid #efefef;
+    font-size: 1rem;
+    &:hover{
+         background-color: #7a839326;
+     }
+}
+.catalog-tree__link:not(.collapsed){
+    padding-bottom: .5rem;
+    transition: all 0.35s ease;
+}
+.catalog-tree__link.collapsed{
+
+    transition: all 0.35s ease;
+}
+.catalog-tree__link{
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+}
+.catalog-tree__level{
+     font-weight: 300;
+     padding-left: 1rem;
+}
+.catalog-tree__levellink{
+    display: block;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+}
+.catalog-tree__levelitem{
+     list-style-type: none;
+     padding-left: .5rem;
+     padding-top: 0rem;
+     padding-bottom: 0rem;
+     margin-right: -1.5rem;
+     font-size: 1rem;
+    &:hover{
+        background-color: #7a839326;
+     }
+}
+
+
+.collapsed.catalog-tree__dropdown:after {
+    transform: rotate(0deg);
+    transition-property: transform;
+    transition-duration: .5s;
+
+}

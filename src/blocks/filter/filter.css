@@ -1,0 +1,26 @@
+.filter{
+    display: block;
+    box-shadow: 0 0 0 1px rgba(0,0,0,.1), 0 10px 20px -5px rgba(0,0,0,.4);
+}
+.filter__wrapper{
+    padding: .5rem;
+}
+.filter__title{
+    text-transform: uppercase;
+    background-color: #414d64;
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 1rem;
+    font-weight:400;
+}
+.filter__name{
+    font-size: .8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.filter__label {
+    font-size: .8rem;
+    display: block;
+}

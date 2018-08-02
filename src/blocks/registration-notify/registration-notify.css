@@ -1,0 +1,26 @@
+.registration__notify {
+    background-color: #7d8595;
+    color: #fff;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    @media (--viewport-medium) {
+        margin-bottom: 0rem;
+    }
+}
+.registration__credentials{
+    text-align: center;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+}
+
+.registration__done{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.registration_total{
+
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}

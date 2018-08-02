@@ -1,0 +1,61 @@
+$icon-font: myiconfont;
+
+.icon:before{
+    color: inherit;
+    position: relative;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    text-decoration: none;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+}
+
+.icon-catalog:before{
+    font-family: $icon-font;
+    content:'\E001';
+    font-size: 1em;
+    top: .1em;
+    padding-right: .5em;
+}
+.icon-cart{
+    padding-left: .5em;
+}
+.icon-cart:before {
+    font-family: $icon-font;
+    content: "\E006";
+
+    font-size: 2.3em;
+}
+.btn-search-icon:before {
+    font-family: $icon-font;
+    content: "\E003";
+    font-size: 1.5rem;
+    top: 2px;
+    left: 0;
+
+}
+.icon-rub:before{
+    font-family: $icon-font;
+    content: "\E005";
+    font-size: .9em;
+    top: 0;
+
+
+}
+.btn-remove-icon:before{
+    font-family: $icon-font;
+    content: "\E009";
+    font-size: 1.5rem;
+    top: 0;
+
+
+}
+.icon-looked:before{
+    font-family: myiconfont;
+    content: "\E007";
+    font-size: 1rem;
+    top: 2px;
+    padding-right: .5rem;
+}
+
