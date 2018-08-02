@@ -17,6 +17,9 @@ const cached            = require('gulp-cached');
 const dependents        = require('gulp-dependents');
 const cssbeautify       = require('gulp-cssbeautify');
 const postcss           = require('gulp-postcss');
+const iconfont          = require('gulp-iconfont');
+const iconfontCss       = require('gulp-iconfont-css');
+const fontName          = 'myiconfont';
 
 
 // Vars
@@ -35,8 +38,8 @@ var path = {
         img:                'src/img/**/*.*',
         fonts:              'src/fonts/**/*.*',
         icon:               'src/icons/**/*.svg',
-        icon_font_path:     'src/scss/_icons.scss',
-        icon_template_path: 'src/common_library/_icons_template.scss'
+        icon_font_path:     '../../../src/common.blocks/icons/_icons.scss',
+        icon_template_path: 'src/fonts/icons/_icons_template.scss'
 
     },
     watch: {
@@ -174,6 +177,26 @@ gulp.task('css:build', function () {
 
 });
 
+// icon fonts
+gulp.task('iconfont', function(){
+    return gulp.src(path.src.icon)
+        .pipe(iconfontCss({
+            path: path.src.icon_template_path,
+            fontName: fontName,
+
+            targetPath: path.src.icon_font_path,
+            fontPath: '../fonts/icons/'
+        }))
+        .pipe(iconfont({
+            fontName: fontName,
+            prependUnicode: true,
+            formats: ['svg', 'ttf', 'eot', 'woff', 'woff2'],
+            normalize: true,
+            fontHeight: 1001
+
+        }))
+        .pipe(gulp.dest('src/fonts/icons'));
+});
 
 
 
