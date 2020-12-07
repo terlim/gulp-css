@@ -7,7 +7,7 @@ $icon_font_name:"myiconfont";
     url('../fonts/icons/myiconfont.ttf') format('truetype'),
     url('../fonts/icons/myiconfont.svg#myiconfont') format('svg');
 }
-%icon-aria,
+%icon-aria0,
 %last_selector {
            &:before {
                font-family:$icon_font_name;
@@ -49,6 +49,6 @@ $icon_font_name:"myiconfont";
     }
 }
 
-%icon-aria:before {
+%icon-aria0:before {
     content:'\E001';
-}
+}

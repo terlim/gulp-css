@@ -14,7 +14,7 @@ module.exports = {
     src: {
         pug: path.join(root, 'src/pages/*.pug'),
         icon_template_path: path.join(root,'src/icons/_icons_template.scss'),
-        icon_font_path: path.join(root, 'src/icons/_icons.scss'),
+        icon_font_path: path.join('../../icons/_icons.scss'),
         fonts_icons: path.join(root, 'src/fonts/icons/'),
         icon: path.join(root, 'src/icons/**/*.svg'),
         fonts: path.join(root, 'src/fonts/**/*.*'),
