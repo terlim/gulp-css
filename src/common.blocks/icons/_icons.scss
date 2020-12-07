@@ -1,0 +1,86 @@
+$icon_font_name:"myiconfont";
+@font-face {
+	font-family:$icon_font_name;
+	src: url('../fonts/icons/myiconfont.eot');
+	src: url('../fonts/icons/myiconfont.eot?#iefix') format('eot'),
+	url('../fonts/icons/myiconfont.woff') format('woff'),
+	url('../fonts/icons/myiconfont.ttf') format('truetype'),
+	url('../fonts/icons/myiconfont.svg#myiconfont') format('svg');
+}
+%icon-glyphicons-243-map-marker,
+%icon-glyphicons-28-search,
+%icon-glyphicons-443-earphone,
+%icon-glyphicons-550-ruble,
+%icon-glyphicons-commerce,
+%icon-glyphicons-eye-open,
+%icon-glyphicons-list,
+%icon-if_ic_arrow_drop_down_48px_352021,
+%icon-trash-can,
+%last_selector {
+		&:before {
+			font-family:$icon_font_name;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			font-style: normal;
+			font-variant: normal;
+			font-weight: normal;
+			// speak: none; // only necessary if not using the private unicode range (firstGlyph option)
+			text-decoration: none;
+			text-transform: none;
+		}
+	}
+
+%icons_before_after {
+	&:before,
+	&:after {
+		font-family: $icon_font_name;
+		speak: none;
+		font-style: normal;
+		font-weight: normal;
+		font-variant: normal;
+		text-transform: none;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+}
+
+%icons_after {
+	&:after {
+		font-family: $icon_font_name;
+		speak: none;
+		font-style: normal;
+		font-weight: normal;
+		font-variant: normal;
+		text-transform: none;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+}
+
+%icon-glyphicons-243-map-marker:before {
+	content:'\E001';
+}
+%icon-glyphicons-28-search:before {
+	content:'\E002';
+}
+%icon-glyphicons-443-earphone:before {
+	content:'\E003';
+}
+%icon-glyphicons-550-ruble:before {
+	content:'\E004';
+}
+%icon-glyphicons-commerce:before {
+	content:'\E005';
+}
+%icon-glyphicons-eye-open:before {
+	content:'\E006';
+}
+%icon-glyphicons-list:before {
+	content:'\E007';
+}
+%icon-if_ic_arrow_drop_down_48px_352021:before {
+	content:'\E008';
+}
+%icon-trash-can:before {
+	content:'\E009';
+}

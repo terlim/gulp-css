@@ -1,0 +1,57 @@
+@custom-media --viewport-small (width >= 576px);
+@custom-media --viewport-medium (width >= 768px);
+@custom-media --viewport-large (width >= 992px);
+@custom-media --viewport-xlarge (width >= 1200px);
+
+@import "../common.blocks/fonts/fonts.css";
+@import "../common.blocks/normalize/normalize.css";
+
+
+/*
+** common container, container-fluid
+*/ 
+
+@import "../common.blocks/bootstrap-grid/bootstrap-grid.css";
+@import "../../bower_components/bootstrap-offcanvas/dist/css/bootstrap.offcanvas.css";
+@import "../../bower_components/swiper/dist/css/swiper.css";
+
+@import "../common.blocks/form-group/form-group.css";
+@import "../common.blocks/form-control/form-control.css";
+@import "../common.blocks/input-group/input-group.css";
+@import "../common.blocks/button/button.css";
+@import "../common.blocks/tables/tables.css";
+
+@import "../common.blocks/icons/icons.css";
+@import "../common.blocks/pagination/pagination.css";
+
+
+
+
+/*
+** project blocks
+*/
+
+@import "../blocks/header/header.css";
+@import "../blocks/navbar/navabr.css";
+@import "../blocks/search/search.css";
+@import "../blocks/cart/cart.css";
+@import "../blocks/catalog-tree/catalog-tree.css";
+@import "../blocks/filter/filter.css";
+@import "../blocks/breadcrumbs/breadcrumbs.css";
+@import "../blocks/card-category/card-category.css";
+@import "../blocks/card-tovar/card-tovar.css";
+@import "../blocks/btn-add-cart/btn-add-cart.css";
+@import "../blocks/btn-remove/btn-remove.css";
+@import "../blocks/btn-order/btn-order.css";
+@import "../blocks/btn-clear-filter/btn-clear-filter.css";
+@import "../blocks/btn-forward/btn-forward.css";
+@import "../blocks/registration-notify/registration-notify.css";
+@import "../blocks/nav-bottom/nav-bottom.css";
+@import "../blocks/looked/looked.css";
+@import "../blocks/product/product.css";
+@import "../blocks/promo/promo-card.css";
+@import "../blocks/get-order/get-order.css";
+
+@import "../blocks/footer/footer.css";
+
+
